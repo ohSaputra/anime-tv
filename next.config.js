@@ -16,8 +16,7 @@ module.exports = async _phase => {
 		// 	domains: ['avatars.githubusercontent.com'],
 		// },
 		rewrites() {
-			const notakuDocsUrlWithBasePath = new URL(`https://docs-22fk4.notaku.site/docs`)
-				.origin;
+			const notakuDocsUrlWithBasePath = new URL(`https://docs-22fk4.notaku.site`).origin;
 			return [
 				{
 					source: '/docs',

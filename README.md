@@ -15,7 +15,9 @@
   Watch anime online, the ultimate destination for anime enthusiasts of all ages and interests.
 </h3>
 
-## 🚀 [Watch NOW](https://anime-tv-delta.vercel.app/) 🚀
+<p align="center">
+<a href="https://anime-tv-delta.vercel.app/">🚀 Watch NOW 🚀</a>
+</p>
 
 ---
 

@@ -43,7 +43,7 @@ export default function NavComponent({ handleSearchAnime }: INavComponent): JSX.
 		new Promise(() => setTimeout(() => handleSearchAnime(keyword), 500));
 
 	return (
-		<MainContainer data-testid="navbar">
+		<MainContainer>
 			<Box>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
 					<Box py={4}>
@@ -65,7 +65,7 @@ export default function NavComponent({ handleSearchAnime }: INavComponent): JSX.
 									bg="gray.600"
 									borderColor="gray.600"
 									borderRadius="xl"
-									w={{ md: 'sm' }}
+									w={{ base: 40, md: 'sm' }}
 									focusBorderColor="purple.500"
 									_placeholder={{ color: 'gray.400' }}
 									_hover={{ borderColor: 'purple.300' }}

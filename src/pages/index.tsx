@@ -22,8 +22,8 @@ export default function HomePage() {
 	const { data: topShow, isLoading: isLoadingTopShow } = useTopShow();
 
 	useEffect(() => {
-		if (show) addShows(show.data);
-		if (topShow) addShows(topShow.data);
+		if (show) addShows(show?.data);
+		if (topShow) addShows(topShow?.data);
 	}, [show, topShow, addShows]);
 
 	return (
@@ -33,9 +33,9 @@ export default function HomePage() {
 			<BannerComponent data-testid="banner-homepage" />
 			<TrendingComponent
 				isLoading={isLoadingTopShow}
-				shows={!isLoadingTopShow ? topShow.data : []}
+				shows={!isLoadingTopShow ? topShow?.data : []}
 			/>
-			<AiringComponent isLoading={isLoading} shows={!isLoading ? show.data : []} />
+			<AiringComponent isLoading={isLoading} shows={!isLoading ? show?.data : []} />
 		</>
 	);
 }

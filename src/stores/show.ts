@@ -52,7 +52,7 @@ const showCreator: StateCreator<State, [['zustand/persist', unknown]]> = (set, g
 
 		set(state => ({ shows: [anime, ...state.shows] }));
 	},
-	addShows: (animes: IAnime[]) => {
+	addShows: (animes: IAnime[] = []) => {
 		animes.map(anime => {
 			const animeExists = !!get().getShow(anime.mal_id);
 			if (animeExists) get().removeShow(anime.mal_id);

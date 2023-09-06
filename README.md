@@ -21,17 +21,17 @@
 
 <!-- Introduction Section -->
 
-## 📖 Introduction
+## Introduction
 
 This project uses NextJS as core of the technology combined with all the the **best practices** of **[JAMStack](https://jamstack.org)**.
 
-### 🛠️ Installation
+### Installation
 
 Before you can start developing the application, you need to clone the repository to your local machine:
 
 ```bash
  $ git clone https://github.com/ohSaputra/anime-tv.git
-```.
+```
 
 After that, move to the root of the project.
 

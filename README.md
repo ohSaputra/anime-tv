@@ -23,7 +23,7 @@
 
 ## Introduction
 
-This project uses NextJS as core of the technology combined with all the the **best practices** of **[JAMStack](https://jamstack.org)**.
+This project uses NextJS and typescript as core of the technology combined with all the the **best practices** of **[JAMStack](https://jamstack.org)**.
 
 ### Installation
 

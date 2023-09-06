@@ -20,7 +20,7 @@ module.exports = async _phase => {
 			return [
 				{
 					source: '/docs',
-					destination: `${notakuDocsUrlWithBasePath}/docs`,
+					destination: `${notakuDocsUrlWithBasePath}`,
 				},
 				{
 					source: '/docs/:path*',

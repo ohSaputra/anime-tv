@@ -1,46 +1,41 @@
+import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 
-// --- Chakra-UI ---
-import { Center } from '@chakra-ui/react';
+// --- Services ---
+import { useShow, useTopShow } from '@services/shows';
+
+// --- Stores ---
+import useShowStore from '@stores/show';
 
 // --- Components ---
-const SearchComponent = dynamic(() => import('@components/Search'));
-
-// --- Motion Components ---
-import MotionContainer from '@components/Motion/MotionContainer';
-
-// -- Animations --
-import { slide } from '@animations';
+const BannerComponent = dynamic(() => import('@components/home/Banner'));
+const TrendingComponent = dynamic(() => import('@components/home/Trending'));
+const AiringComponent = dynamic(() => import('@components/home/Airing'));
 
 export default function HomePage() {
-	const router = useRouter();
+	const { addShows, shows } = useShowStore(state => state);
 
-	const handleSearchLogin = (login?: string) => {
-		login &&
-			router.push({
-				pathname: '/user/[login]',
-				query: { login },
-			});
-	};
+	// --- Using React Query ---
+	//
+	const { data: show, isLoading } = useShow();
+	const { data: topShow, isLoading: isLoadingTopShow } = useTopShow();
+
+	useEffect(() => {
+		if (show) addShows(show.data);
+		if (topShow) addShows(topShow.data);
+	}, [show, topShow, addShows]);
 
 	return (
 		<>
 			<NextSeo title="Search" description="List of anime this season" />
 
-			<MotionContainer
-				w="full"
-				h="100vh"
-				initial="initial"
-				animate="animate"
-				exit="exit"
-				variants={slide}
-			>
-				<Center w="full" h="full">
-					<SearchComponent handleSearchLogin={handleSearchLogin} />
-				</Center>
-			</MotionContainer>
+			<BannerComponent />
+			<TrendingComponent
+				isLoading={isLoadingTopShow}
+				shows={!isLoadingTopShow ? topShow.data : []}
+			/>
+			<AiringComponent isLoading={isLoading} shows={!isLoading ? show.data : []} />
 		</>
 	);
 }

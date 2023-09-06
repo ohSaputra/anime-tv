@@ -20,6 +20,12 @@ dependencies:
   '@emotion/styled':
     specifier: 11.10.8
     version: 11.10.8(@emotion/react@11.10.8)(@types/react@18.0.38)(react@18.2.0)
+  '@fontsource/open-sans':
+    specifier: ^5.0.11
+    version: 5.0.11
+  '@fontsource/raleway':
+    specifier: ^5.0.8
+    version: 5.0.8
   '@hookform/resolvers':
     specifier: 2.9.11
     version: 2.9.11(react-hook-form@7.43.9)
@@ -2777,6 +2783,14 @@ packages:
     resolution: {integrity: sha512-lxJ9R5ygVm8ZWgYdUweoq5ownDlJ4upvoWmO4eLxBYHdMo+vZ/Rx0EN6MbKWDJOSUGrqJy2Gt+Dyv/VKml0fjg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fontsource/open-sans@5.0.11:
+    resolution: {integrity: sha512-H3asfQirkh9avht/qxeMFDhAxBzLi9qH0rQAAVv5TxmZL9vvmZc0e70Z6gXPem6BB1+gUsT9QSqgGqH60rpuuA==}
+    dev: false
+
+  /@fontsource/raleway@5.0.8:
+    resolution: {integrity: sha512-b6ZTFQ7sZSUSm/ny0SNXdafcu+p6jpIzpEc1Woxym4qkuAp3kONZJs9r+HYPfMm/fDW1VBIzZxVOLhglYzdw6Q==}
+    dev: false
 
   /@hookform/resolvers@2.9.11(react-hook-form@7.43.9):
     resolution: {integrity: sha512-bA3aZ79UgcHj7tFV7RlgThzwSSHZgvfbt2wprldRkYBcMopdMvHyO17Wwp/twcJasNFischFfS7oz8Katz8DdQ==}

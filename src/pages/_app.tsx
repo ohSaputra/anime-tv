@@ -1,6 +1,10 @@
 import { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 
+// --- Fonts ---
+import '@fontsource/raleway/400.css';
+import '@fontsource/open-sans/400.css';
+
 // --- React Query ---
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 

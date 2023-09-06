@@ -2,14 +2,14 @@ import { extendTheme, ThemeConfig } from '@chakra-ui/react';
 
 const config: ThemeConfig = {
 	initialColorMode: 'dark',
-	useSystemColorMode: true,
+	useSystemColorMode: false,
 };
 
 const theme = extendTheme({
 	config,
 	fonts: {
-		heading: 'Rubik',
-		body: 'Rubik',
+		heading: `'Open Sans', sans-serif`,
+		body: `'Raleway', sans-serif`,
 	},
 	styles: {
 		global: {

@@ -43,7 +43,7 @@ export default function NavComponent({ handleSearchAnime }: INavComponent): JSX.
 		new Promise(() => setTimeout(() => handleSearchAnime(keyword), 500));
 
 	return (
-		<MainContainer>
+		<MainContainer data-testid="navbar">
 			<Box>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
 					<Box py={4}>

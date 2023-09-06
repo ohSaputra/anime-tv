@@ -145,6 +145,9 @@ devDependencies:
   lint-staged:
     specifier: 13.2.2
     version: 13.2.2
+  next-router-mock:
+    specifier: ^0.9.9
+    version: 0.9.9(next@13.2.4)(react@18.2.0)
   next-sitemap:
     specifier: 4.0.9
     version: 4.0.9(@next/env@13.2.4)(next@13.2.4)
@@ -7770,6 +7773,16 @@ packages:
       - uglify-js
       - webpack
     dev: false
+
+  /next-router-mock@0.9.9(next@13.2.4)(react@18.2.0):
+    resolution: {integrity: sha512-2o50zr+5pWj0zzcvBEWNHDlmWmlDExPdX5OuXKW2aCxV85XUA6MlELr0n0f0wtXj5dUVZ8qspHj6YwF7KZHrbA==}
+    peerDependencies:
+      next: '>=10.0.0'
+      react: '>=17.0.0'
+    dependencies:
+      next: 13.2.4(@babel/core@7.19.3)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+    dev: true
 
   /next-seo@5.15.0(next@13.2.4)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==}

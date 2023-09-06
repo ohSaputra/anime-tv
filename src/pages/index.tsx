@@ -30,7 +30,7 @@ export default function HomePage() {
 		<>
 			<NextSeo title="Search" description="List of anime this season" />
 
-			<BannerComponent />
+			<BannerComponent data-testid="banner-homepage" />
 			<TrendingComponent
 				isLoading={isLoadingTopShow}
 				shows={!isLoadingTopShow ? topShow.data : []}

@@ -47,7 +47,7 @@ export default function AnimePage() {
 
 	return (
 		<>
-			<NextSeo title={show.title} description={show.synopsis} />
+			<NextSeo title={show?.title} description={show?.synopsis} />
 
 			{isError && <AnimeNotFoundComponent />}
 

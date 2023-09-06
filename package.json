@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"private": true,
 	"author": "Hendra",
-	"description": "List of Anime TV this season",
+	"description": "Watch anime online, the ultimate destination for anime enthusiasts of all ages and interests.",
 	"lint-staged": {
 		"src/**/*.+(js|jsx|ts|tsx|json|md)": [
 			"pnpm run lint:fix"

@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 
 // --- Chakra-UI ---
 import {
@@ -28,16 +29,21 @@ const validationSchema = Yup.object().shape({
 
 type FormType = Yup.InferType<typeof validationSchema>;
 
-interface INavComponent {
-	handleSearchAnime: (login?: string) => void;
-}
-
-export default function NavComponent({ handleSearchAnime }: INavComponent): JSX.Element {
+export default function NavComponent(): JSX.Element {
+	const router = useRouter();
 	const { colorMode, toggleColorMode } = useColorMode();
 	const { handleSubmit, register } = useForm({
 		resolver: yupResolver(validationSchema),
 		mode: 'onTouched',
 	});
+
+	const handleSearchAnime = (keyword?: string) => {
+		keyword &&
+			router.push({
+				pathname: '/search/[keyword]',
+				query: { keyword },
+			});
+	};
 
 	const onSubmit = ({ keyword }: FormType) =>
 		new Promise(() => setTimeout(() => handleSearchAnime(keyword), 500));

@@ -16,8 +16,8 @@ export default function TrendingCardComponent({
 		<Box backgroundColor="none">
 			<Image
 				objectFit="cover"
-				src={data.images.webp.image_url}
-				alt={data.titles[0].title}
+				src={data.images.jpg.image_url}
+				alt={data.title}
 				maxH="md"
 				height={{ base: '200px', md: '310px' }}
 				width="100%"
@@ -25,7 +25,7 @@ export default function TrendingCardComponent({
 			/>
 			<Box py={4}>
 				<Heading size="sm" noOfLines={1} textAlign="left">
-					{data.titles[0].title}
+					{data.title}
 				</Heading>
 				{data.episodes && (
 					<Text color={episodeColor} fontSize={13}>
